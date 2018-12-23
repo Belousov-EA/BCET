@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7fbe36</color>
+    <color name="colorPrimaryDark">#6eae39</color>
+    <color name="colorAccent">#28c383</color>
+    <color name="colorWight">#ffffff</color>
+    <color name="colorConsoleMsgPhone">#f2f2f2</color>
+    <color name="colorConsoleMsgArduino">#2ba7ff</color>
+    <color name="colorConsoleBackground">#191a1b</color>
+</resources>

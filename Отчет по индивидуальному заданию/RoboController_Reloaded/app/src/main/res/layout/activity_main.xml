@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.example.ilya.robocontroller.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/V"
+        android:id="@+id/textViewSpeed"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:text="@string/undoBtn"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/SpeedUndoBtn"
+        android:layout_alignParentTop="true"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
+
+    <Button
+        android:text="@string/redoBtn"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:id="@+id/SpeedRedoBtn"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/SpeedUndoBtn"
+        android:layout_marginStart="18dp"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:id="@+id/divider1"
+        android:layout_below="@+id/editSpeed"
+        android:layout_alignParentStart="true"
+        android:enabled="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:id="@+id/devider2"
+        android:layout_below="@+id/integralRatioRedoBtn"
+        android:layout_alignParentStart="true"
+        android:enabled="false" />
+
+    <TextView
+        android:text="@string/periodic_ratioTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_alignParentStart="true"
+        android:id="@+id/param1descript" />
+
+    <TextView
+        android:text="@string/differential_ratioTxtViw"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/param1descript"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/param2descript" />
+
+    <TextView
+        android:text="@string/integral_ratioTxtViw"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/param3descript" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/param1descript"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editPeriodRatio" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:ems="10"
+        android:id="@+id/editIntegralRatio"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/param3descript"
+        android:layout_alignParentEnd="true"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:text="@string/lastTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastSpeedTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_marginLeft="85dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSpeed"
+        android:layout_above="@+id/divider1"
+        android:layout_alignParentEnd="true"
+        android:max="99" />
+
+    <Button
+        android:text="@string/redoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/periodRatioRedoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_below="@+id/param1descript"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/periodRatioUdoBtn" />
+
+    <Button
+        android:text="@string/redoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/integralRatioRedoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_below="@+id/param3descript"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/undoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/integralRatioUndoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_below="@+id/param3descript"
+        android:layout_marginTop="40dp"
+        android:layout_toStartOf="@+id/integralRatioRedoBtn" />
+
+    <Button
+        android:text="@string/redoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/diffRatioRedoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_below="@+id/param2descript"
+        android:layout_marginTop="40dp"
+        android:layout_alignEnd="@+id/editDifferRatio" />
+
+    <Button
+        android:text="@string/undoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/diffRatioUdoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_toStartOf="@+id/diffRatioRedoBtn"
+        android:layout_below="@+id/param2descript"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:layout_width="110dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editDifferRatio"
+        android:layout_below="@+id/param2descript"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/lastTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastPeriodic"
+        android:layout_below="@+id/param1descript"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/lastTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastDiff"
+        android:layout_below="@+id/param2descript"
+        android:layout_alignStart="@+id/param2descript" />
+
+    <TextView
+        android:text="@string/lastTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastIntegral"
+        android:layout_below="@+id/param3descript"
+        android:layout_alignStart="@+id/param3descript" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="number"
+        android:id="@+id/editSpeed"
+        android:layout_alignBaseline="@+id/textViewSpeed"
+        android:layout_alignBottom="@+id/textViewSpeed"
+        android:layout_alignEnd="@+id/param1descript"
+        android:layout_marginEnd="15dp" />
+
+    <TextView
+        android:text="@string/lastTxtViw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devider2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lastFan" />
+
+    <TextView
+        android:text="@string/fan"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fanTxtViw"
+        android:layout_below="@+id/lastFan"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:id="@+id/devider3"
+        android:enabled="false"
+        android:layout_below="@+id/seekBarFan"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopBtn"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/startBtn"
+        android:layout_alignEnd="@+id/startBtn"
+        android:layout_alignStart="@+id/startBtn"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="@string/profilesBtn"
+        android:layout_width="73dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/consoleBtn"
+        android:layout_alignStart="@+id/setdataBtn"
+        android:id="@+id/profileBtn"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="@string/start_debugBtn"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:id="@+id/startDebugBtn"
+        android:textAllCaps="false"
+        android:layout_alignBottom="@+id/startBtn"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/upload_dataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/setdataBtn"
+        android:textAllCaps="false"
+        android:layout_above="@+id/stopBtn"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/consoleBtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="7dp"
+        android:id="@+id/consoleBtn"
+        android:textAllCaps="false"
+        android:layout_alignBottom="@+id/stopBtn"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_add_box_black_24px"
+        android:id="@+id/profileAddBtn"
+        android:layout_toEndOf="@+id/profileBtn"
+        android:layout_alignBottom="@+id/profileBtn"
+        android:layout_alignTop="@+id/profileBtn"
+        android:visibility="visible" />
+
+    <Button
+        android:text="@string/undoBtn"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:id="@+id/periodRatioUdoBtn"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_below="@+id/param1descript"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/fPeriodTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fPerRatiodescript"
+        android:layout_below="@+id/devider3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/fIntTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/devider3"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/fIntRatiodescript" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/fDifRatiodescript"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editFPerRatio" />
+
+    <TextView
+        android:text="@string/FDifTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fDifRatiodescript"
+        android:layout_below="@+id/devider3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/fspeedTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fSpeeddescript"
+        android:layout_below="@+id/editFDifRatio"
+        android:layout_toStartOf="@+id/lastDiff" />
+
+    <TextView
+        android:text="@string/normaltimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fSpeeddescript"
+        android:layout_toEndOf="@+id/param2descript"
+        android:id="@+id/normalTimedescript" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarFan"
+        android:layout_alignBottom="@+id/fanTxtViw"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/consoleBtn" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editNormapTime"
+        android:layout_below="@+id/normalTimedescript"
+        android:layout_toEndOf="@+id/fDifRatiodescript" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editFSpeed"
+        android:layout_below="@+id/fSpeeddescript"
+        android:layout_toStartOf="@+id/SpeedUndoBtn" />
+
+    <TextView
+        android:text="@string/returntimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editFSpeed"
+        android:layout_alignParentStart="true"
+        android:id="@+id/returnTimedescript" />
+
+    <TextView
+        android:text="@string/turnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editFSpeed"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/TurnDescript" />
+
+    <TextView
+        android:text="@string/stoptimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNormapTime"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/stopTimeDescript" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/returnTimedescript"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editReturnTime" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/TurnDescript"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTurn" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/TurnDescript"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/editStopTime" />
+
+    <Button
+        android:text="@string/startBtn"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/startBtn"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/devider3"
+        android:layout_marginTop="180dp"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="@dimen/editTextHeight"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editFDifRatio"
+        android:layout_below="@+id/fDifRatiodescript"
+        android:layout_toEndOf="@+id/fSpeeddescript" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editFIntRatio"
+        android:layout_height="@dimen/editTextHeight"
+        android:layout_below="@+id/fIntRatiodescript"
+        android:layout_alignStart="@+id/setdataBtn" />
+
+</RelativeLayout>
